@@ -1,0 +1,146 @@
+
+
+body {
+  background-color: #f2f2f2;
+  font-family: "Karla", Arial, sans-serif;
+
+  * {
+    box-sizing: border-box;
+  }
+}
+
+h2 {
+  font-size: 120%;
+  font-weight: bold;
+  text-align: center;
+}
+
+small {
+  font-size: 14px;
+}
+
+.pull {
+  float: left;
+}
+
+.push {
+  float: right;
+}
+
+.container {
+  width: 100%;
+  max-width: 960px;
+  margin: 100px auto;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+/*Card Styling*/
+
+.card {
+    border: 0.15rem solid;
+    border-image: linear-gradient(
+        45deg,
+        rgb(255, 0, 0),
+        rgb(240, 0, 0),
+        rgb(0, 0, 0)
+      )
+      1;  
+  background-color: white;
+
+  &__wrap {
+    &--inner {
+      padding: 12px;
+    }
+  }
+
+  &__item {
+    margin-left: 5%;
+    font-weight: bold;
+  }
+
+  &__sub {
+    padding: 0 18px;
+    display: flex;
+    justify-content: space-evenly;
+    font-weight: bold;
+  }
+
+  &__footer {
+    padding: 18px;
+    overflow: hidden;
+    border-top: 1px solid #dedede;
+  }
+}
+
+/*Card Flex Code*/
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  &__wrap {
+    &--outer {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+
+    &--inner {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+
+      @media (min-width: 480px) {
+        width: 50%;
+      }
+
+      @media (min-width: 1024px) {
+        width: 33.33%;
+      }
+    }
+  }
+}
+
+hr.new1 {
+  border-bottom: 0.25rem solid transparent;
+  border-image: linear-gradient(
+    89.86deg,
+    #ff0000 50.12%,
+    #bbbbb6 64.35%,
+    #000000 78.48%
+  );
+  border-image-slice: 1;
+
+  width: 60%;
+}
+
+input {
+  border-color: #000000;
+  border-radius: 0.6rem;
+  width: 20%;
+}
+
+hr.new2 {
+  border-bottom: 0.25rem solid transparent;
+  border-image: linear-gradient(
+    89.86deg,
+    #ff0000 50.12%,
+    #bbbbb6 64.35%,
+    #000000 78.48%
+  );
+  border-image-slice: 1;
+
+  width: 50%;
+  margin-left: 40%;
+}
+
+p.card__itemadditional {
+    font-size: 60%;
+}
+
